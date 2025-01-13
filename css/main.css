@@ -1,0 +1,307 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+
+/* 
+
+  font-family: 'Nanum Myeongjo';
+  font-weight: 400;
+  font-weight: 700;
+  font-weight: 800;
+}
+   */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+    font-family: 'Nanum Myeongjo';
+    font-weight: 400;
+}
+
+/* common */
+.section .inner {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 150px 0;
+}
+
+.section .title {
+    margin-bottom: 70px;
+    text-align: center;
+}
+.section .title h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+.section .title p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* .main_visual */
+.main_visual {
+    height: 100vh;
+    position: relative;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.main_visual .inner {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main_visual .inner .text {
+    color: #fff;
+}
+.main_visual .inner .text h1 {
+    font-size: 24px;
+    margin-bottom: 52px;
+}
+.main_visual .inner .text p {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.3;
+    /* line-height: 78px; */
+}
+
+/* .best */
+.best .inner .item_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.best .inner .item_wrap .item {
+    /* width => 342 / 1440 * 100 */
+    width: 23.75%;
+}
+.best .inner .item_wrap .item .image {
+    max-height: 450px;
+    /* 450/1440*100 */
+    height: 31.25vw;
+    overflow: hidden;
+}
+.best .inner .item_wrap .item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+.best .inner .item_wrap .item .text {
+    margin-top: 30px;
+}
+.best .inner .item_wrap .item .text span {
+    color: #c9ab81;
+}
+.best .inner .item_wrap .item .text h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 20px 0 40px;
+}
+.best .inner .item_wrap .item .text strong {
+    font-size: 32px;
+    font-weight: 800;
+}
+.best .inner .item_wrap .item:hover .image img {
+    transform: scale(1.2);
+}
+.best .inner .item_wrap .item:hover .text span {
+    text-decoration: underline;
+}
+
+
+
+/* .pick */
+.pick {
+    background-color: #f5f5f5; 
+}
+.pick .inner {
+    margin: 0 auto;
+}
+.pick .item_wrap a {
+    display: flex;
+}
+.pick .item_wrap .image {
+    width: 50%;
+    height: 478px;
+}
+.pick .item_wrap .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pick .item_wrap .text {
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 70px;
+}
+.pick .item_wrap .text span {
+    color: #c9ab81;
+    font-weight: 700;
+}
+.pick .item_wrap .text h3 {
+    font-size: 36px;
+    margin: 20px 0 40px;
+}
+.pick .item_wrap .text p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* .gallery  */
+.gallery {
+    background: url('../img/gallery.jpg') center center / cover no-repeat fixed;
+    padding: 150px 0;
+}
+.gallery  .inner {
+    background-color: rgba(255, 255, 255, 0.736);
+    padding: 150px 0;
+}
+.gallery  .inner a {
+    display: block;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0d1c2;
+    margin: 0 auto;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    z-index: 1;
+     
+}
+.gallery .inner a::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #000;
+    transition: 0.5s;
+    z-index: -1;
+}
+.gallery  .inner a:hover {
+    color: #fff;
+     
+}
+.gallery  .inner a:hover::before {
+    width: 100%;
+}
+
+
+/* 1024 */
+@media screen and (max-width: 1024px) {
+    .section .inner {
+        padding: 100px 0;
+    }
+    .section .title {
+        margin-bottom: 40px;
+    }
+    .section .title h2 {
+        font-size: 40px;
+    }
+    .section .title p {
+        font-weight: normal;
+    }
+    .best .inner .item_wrap .item .text strong {
+        font-size: 28px;
+    }
+    .main_visual .inner .text h1 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .main_visual .inner .text p {font-size: 40px;}
+    .best .inner .item_wrap .item .text {margin-top: 20px;}
+    .best .inner .item_wrap .item .text h3 {font-size: 20px;}
+    .gallery {padding: 100px 0;}
+}
+/* 890 */
+@media screen and (max-width: 890px) {
+    .pick .item_wrap .text {padding: 30px;}
+}/* 890 */
+
+
+/* 767 */
+@media screen and (max-width: 767px) {
+    .best .inner .item_wrap {
+        row-gap: 60px;
+    }
+    .best .inner .item_wrap .item {
+        /* 450 / 920 * 100*/
+        width: 48.91%;
+    }
+    .best .inner .item_wrap .item .image {
+        /* height: 593px 
+        593 / 920 * 100*/
+        max-height: 593px;
+        height: 64.45vw;
+    }
+
+    .pick .item_wrap a {display: block;}
+    .pick .item_wrap .image {
+        width: 100%;
+        max-height: 478px;
+        height: 49.79vw;
+
+    }
+    .pick .item_wrap .text {width: 100%;}
+    .gallery .inner {
+        padding: 100px 20px;
+    }
+}/* 767 */
+
+/* 480 */
+@media screen and (max-width: 480px) {
+    .section .inner {padding: 60px 0;}
+    .section .title {margin-bottom: 20px;}
+    .section .title h2 {font-size: 32px; margin-bottom: 0px;}
+    .section .title p {font-size: 16px; line-height: 1.5;}
+
+    .best .inner .item_wrap {row-gap: 32px;}
+    .best .inner .item_wrap .item .text {margin-top: 8px;}
+    .best .inner .item_wrap .item .text span {font-size: 14px;}
+    .best .inner .item_wrap .item .text h3 {font-size: 16px; margin: 10px 0 20px;}
+    .best .inner .item_wrap .item .text strong {font-size: 20px;}    
+    
+    .pick .item_wrap .text span {font-size: 14px;}
+    .pick .item_wrap .text h3 {font-size: 24px; margin: 10px 0 20px;}
+    
+    .gallery {padding: 60px 0;}
+    .gallery .inner {padding: 60px 20px; background-color: rgba(255, 255, 255, 0.9);}
+     
+    .gallery.section .title {margin-bottom: 50px;}
+
+}/* 480 */
+
+
+
+
+
